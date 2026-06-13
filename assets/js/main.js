@@ -2,7 +2,6 @@
 const hamburger = document.getElementById('nav-hamburger');
 const navMenu   = document.getElementById('nav-menu');
 
-// Create overlay element
 const overlay = document.createElement('div');
 overlay.classList.add('nav-overlay');
 document.body.appendChild(overlay);
@@ -28,11 +27,6 @@ if (hamburger) {
     hamburger.classList.contains('open') ? closeMenu() : openMenu();
   });
   overlay.addEventListener('click', closeMenu);
-  navMenu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      setTimeout(closeMenu, 50);
-    });
-  });
 }
 
 // ── Nav transparency on scroll ──
