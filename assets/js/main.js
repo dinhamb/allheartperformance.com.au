@@ -29,7 +29,9 @@ if (hamburger) {
   });
   overlay.addEventListener('click', closeMenu);
   navMenu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', closeMenu);
+    link.addEventListener('click', () => {
+      setTimeout(closeMenu, 50);
+    });
   });
 }
 
