@@ -84,6 +84,16 @@ img { display: block; max-width: 100%; }
 }
 
 .site-header.transparent { background: transparent; }
+/* Subtle top scrim so the white logo/links stay legible over a bright hero */
+.site-header.transparent::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 160px;
+  background: linear-gradient(180deg, rgba(14, 8, 20, 0.38) 0%, rgba(14, 8, 20, 0) 100%);
+  pointer-events: none;
+  z-index: -1;
+}
 
 .site-header.solid {
   background: rgb(245, 242, 236);
@@ -256,16 +266,17 @@ img { display: block; max-width: 100%; }
   height: 100vh;
   min-height: 620px;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 0 var(--pad-x) clamp(56px, 9vh, 104px);
   overflow: hidden;
 }
 .hero-bg {
   position: absolute;
   inset: 0;
-  background-image: url('https://images.unsplash.com/photo-1541625602330-2277a4c46182?q=80&w=1920&auto=format&fit=crop');
+  background-image: url('../images/editorial/hero.jpg');
   background-size: cover;
-  background-position: center 40%;
+  background-position: center 55%;
   animation: kenBurns 24s ease-in-out infinite alternate;
 }
 @keyframes kenBurns {
@@ -275,18 +286,22 @@ img { display: block; max-width: 100%; }
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(14, 8, 20, 0.30) 0%, rgba(14, 8, 20, 0.50) 100%);
+  background: linear-gradient(180deg, rgba(14, 8, 20, 0.12) 0%, rgba(14, 8, 20, 0.14) 42%, rgba(14, 8, 20, 0.62) 100%);
 }
 .hero-tagline {
   position: relative;
   z-index: 1;
+  width: 100%;
+  max-width: var(--max-w);
+  margin: 0 auto;
   font-family: var(--font-display);
-  font-size: clamp(2.8rem, 5.5vw, 4.6rem);
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
   font-weight: 400;
   color: var(--off-white);
-  line-height: 1.15;
+  line-height: 1.18;
   letter-spacing: -0.01em;
-  text-align: center;
+  text-align: left;
+  text-shadow: 0 1px 20px rgba(14, 8, 20, 0.35);
   opacity: 0;
   animation: fadeUp 1s var(--ease-spring) 0.2s forwards;
 }
@@ -627,6 +642,26 @@ img { display: block; max-width: 100%; }
   justify-content: flex-end;
 }
 
+.about-card-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.about-card-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(20, 26, 48, 0.92) 0%,
+    rgba(20, 26, 48, 0.55) 32%,
+    rgba(20, 26, 48, 0.0) 62%
+  );
+}
+
 .about-card-logo {
   width: 190px;
   opacity: 0.92;
@@ -640,10 +675,11 @@ img { display: block; max-width: 100%; }
   font-size: 1.25rem;
   font-weight: 300;
   font-style: italic;
-  color: rgba(245, 242, 236, 0.88);
+  color: rgba(245, 242, 236, 0.92);
   line-height: 1.55;
   position: relative;
   z-index: 1;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
 }
 
 .about-body .overline   { margin-bottom: 14px; }
@@ -902,14 +938,13 @@ img { display: block; max-width: 100%; }
   :root {
     --pad-x: 24px;
   }
-  .site-header.solid,
-  .site-header.page {
-    background: rgb(20, 26, 48);
-    background: rgba(20, 26, 48, 0.97);
-  }
-  /* On the dark mobile bar, keep the hamburger light (reversed logo shows by default) */
+  /* Light mobile bar to match the light hero: dark logo + dark hamburger */
+  .site-header.solid .nav-logo-light,
+  .site-header.page  .nav-logo-light { display: none; }
+  .site-header.solid .nav-logo-dark,
+  .site-header.page  .nav-logo-dark  { display: block; }
   .site-header.solid .nav-hamburger span,
-  .site-header.page .nav-hamburger span { background: var(--off-white); }
+  .site-header.page .nav-hamburger span { background: var(--off-black); }
   .section                 { padding: 72px var(--pad-x); }
   .philosophy              { padding: 72px var(--pad-x); }
   .cta-strip               { padding: 72px var(--pad-x); }
@@ -926,6 +961,8 @@ img { display: block; max-width: 100%; }
   .footer-nav              { gap: 32px; }
   .contact-panel           { padding: 36px 28px; }
   .hero                    { min-height: 520px; }
+  /* Nudge the crop on mobile so the recognisable rock stays in frame (runner falls off the left) */
+  .hero-bg                 { background-position: 40% 55%; }
   .spread                  { padding: 96px var(--pad-x) 0; }
   .cta-minimal             { padding: 110px var(--pad-x) 96px; }
   .nav-logo-img            { width: 220px; max-width: 60vw; height: auto; }
@@ -942,16 +979,18 @@ img { display: block; max-width: 100%; }
     width: 72vw;
     max-width: 300px;
     height: 100vh;
-    background: var(--navy-black);
+    background: var(--off-white);
     padding: 88px 36px 48px;
     gap: 0;
     z-index: 1000;
-    box-shadow: -4px 0 32px rgba(0,0,0,0.3);
+    box-shadow: -4px 0 32px rgba(22, 19, 24, 0.12);
     transition: right 0.3s ease;
   }
-  .nav-menu li             { border-bottom: 1px solid rgba(255,255,255,0.08); }
-  .nav-menu li a           { display: block; padding: 18px 0; font-size: 1.1rem; color: var(--off-white); }
+  .nav-menu li             { border-bottom: 1px solid rgba(22, 19, 24, 0.08); }
+  .nav-menu li a           { display: block; padding: 18px 0; font-size: 1.1rem; color: var(--navy); }
   .nav-menu li a.active    { color: var(--crimson); }
+  /* When the menu is open, the close (X) sits on the light panel — keep it dark */
+  .nav-hamburger.open span { background: var(--off-black) !important; }
 }
 /* ===================================================
    New components (v15): audience, steps, founder,
