@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Health &amp; Readiness Questionnaire — All Heart Performance</title>
+  <meta name="description" content="Pre-coaching health and training-readiness questionnaire for All Heart Performance clients.">
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="assets/css/styles.css?v=23">
+  <!-- Privacy-friendly analytics (cookieless). Activates once you create a free
+       Plausible account for this domain; until then it loads but records nothing. -->
+  <script defer data-domain="allheartperformance.com.au" src="https://plausible.io/js/script.js"></script>
+</head>
+<body class="inner-page">
+
+  <header class="site-header page" id="site-header">
+    <nav class="site-nav">
+      <a href="index.html" class="nav-brand">
+        <img src="assets/images/logo/bannerlogo.png" alt="All Heart Performance" class="nav-logo-img nav-logo-dark">
+        <img src="assets/images/logo/bannerlogo-rev.png" alt="All Heart Performance" class="nav-logo-img nav-logo-light">
+      </a>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="coaching.html">Coaching</a></li>
+        <li><a href="insights.html">Insights</a></li>
+        <li><a href="contact.html" class="nav-cta">Get In Touch</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <div class="page-hero">
+      <div class="page-hero-inner">
+        <p class="breadcrumb">
+          <a href="index.html">Home</a>
+          <span>&ensp;/&ensp;Readiness</span>
+        </p>
+        <h1 class="page-title">Health &amp; Readiness</h1>
+      </div>
+    </div>
+
+    <section class="section reveal-on-scroll">
+      <div class="section-inner" style="max-width: 720px;">
+        <p class="overline">Before We Begin</p>
+        <h2 class="section-heading" style="margin-bottom: 18px;">A Few Questions First</h2>
+        <p class="section-lead" style="margin-bottom: 28px;">
+          This short questionnaire helps us design training that's safe and right for you. Please answer honestly — your answers are confidential, and if anything needs a closer look, we'll talk it through before you start.
+        </p>
+
+        <div class="q-intro">
+          <p>If you answer <strong>Yes</strong> to any of the health-screening questions, that's not a barrier — it simply means we may ask you to check in with your doctor before we begin. When in doubt, speak with your GP.</p>
+        </div>
+
+        <!-- Web3Forms: replace access_key with your own free key. For sensitive health data,
+             consider a dedicated secure intake provider (see note to client). -->
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+          <input type="hidden" name="access_key" value="89f13a26-e39d-42b8-81c3-f4a06671ce69">
+          <input type="hidden" name="subject" value="New health & readiness questionnaire">
+          <input type="hidden" name="from_name" value="All Heart Performance — Readiness Form">
+          <input type="hidden" name="redirect" value="https://allheartperformance.com.au/thank-you.html">
+          <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+
+          <p class="q-section-title">Your details</p>
+          <p class="q-section-note">So we know who you are and how to reach you.</p>
+          <div class="form-field">
+            <label for="name">Full name</label>
+            <input type="text" id="name" name="name" required autocomplete="name">
+          </div>
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required autocomplete="email">
+          </div>
+          <div class="form-field">
+            <label for="dob">Date of birth</label>
+            <input type="date" id="dob" name="date_of_birth">
+          </div>
+
+          <p class="q-section-title">Health screening</p>
+          <p class="q-section-note">Has a doctor ever told you, or have you experienced, any of the following?</p>
+
+          <div class="q-item">
+            <span class="q-text">A heart condition, or that you should only do physical activity supervised by a doctor</span>
+            <span class="q-options">
+              <label><input type="radio" name="heart_condition" value="Yes" required> Yes</label>
+              <label><input type="radio" name="heart_condition" value="No"> No</label>
+            </span>
+          </div>
+          <div class="q-item">
+            <span class="q-text">Chest pain or discomfort during physical activity, or while at rest</span>
+            <span class="q-options">
+              <label><input type="radio" name="chest_pain" value="Yes" required> Yes</label>
+              <label><input type="radio" name="chest_pain" value="No"> No</label>
+            </span>
+          </div>
+          <div class="q-item">
+            <span class="q-text">Dizziness, loss of balance, or any loss of consciousness</span>
+            <span class="q-options">
+              <label><input type="radio" name="dizziness" value="Yes" required> Yes</label>
+              <label><input type="radio" name="dizziness" value="No"> No</label>
+            </span>
+          </div>
+          <div class="q-item">
+            <span class="q-text">A bone, joint or soft-tissue problem that could be made worse by activity</span>
+            <span class="q-options">
+              <label><input type="radio" name="injury" value="Yes" required> Yes</label>
+              <label><input type="radio" name="injury" value="No"> No</label>
+            </span>
+          </div>
+          <div class="q-item">
+            <span class="q-text">High blood pressure, a metabolic condition (e.g. diabetes), or medication for either</span>
+            <span class="q-options">
+              <label><input type="radio" name="bp_metabolic" value="Yes" required> Yes</label>
+              <label><input type="radio" name="bp_metabolic" value="No"> No</label>
+            </span>
+          </div>
+          <div class="q-item">
+            <span class="q-text">Currently pregnant, or recently given birth</span>
+            <span class="q-options">
+              <label><input type="radio" name="pregnancy" value="Yes" required> Yes</label>
+              <label><input type="radio" name="pregnancy" value="No"> No</label>
+              <label><input type="radio" name="pregnancy" value="N/A"> N/A</label>
+            </span>
+          </div>
+          <div class="q-item">
+            <span class="q-text">Any other reason a health professional has advised you not to exercise</span>
+            <span class="q-options">
+              <label><input type="radio" name="other_reason" value="Yes" required> Yes</label>
+              <label><input type="radio" name="other_reason" value="No"> No</label>
+            </span>
+          </div>
+
+          <div class="form-field" style="margin-top: 22px;">
+            <label for="details">If you answered Yes to anything above, please tell us more</label>
+            <textarea id="details" name="health_details" placeholder="Conditions, medications, or anything we should know to train you safely."></textarea>
+          </div>
+
+          <p class="q-section-title">Your training</p>
+          <p class="q-section-note">A quick picture of where you're starting from.</p>
+          <div class="form-field">
+            <label for="sport">Main focus</label>
+            <select id="sport" name="sport">
+              <option value="">Select one…</option>
+              <option>Cycling</option>
+              <option>Running</option>
+              <option>Triathlon</option>
+              <option>Tennis</option>
+              <option>General fitness</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="background">Current activity &amp; goals</label>
+            <textarea id="background" name="training_background" placeholder="What you're doing now, any recent injuries, and what you'd like to achieve."></textarea>
+          </div>
+
+          <label class="q-consent">
+            <input type="checkbox" name="consent" value="Yes" required>
+            <span>I confirm the information above is accurate, and I consent to All Heart Performance collecting and using this health information to provide coaching, as described in the <a href="privacy.html" style="color: var(--crimson);">Privacy Policy</a>.</span>
+          </label>
+
+          <button type="submit" class="btn btn-primary">Submit Questionnaire</button>
+          <p class="form-note">This questionnaire is a screening tool, not a diagnosis. If you feel unwell or unsure, please consult your doctor before starting any new training.</p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div>
+          <img src="assets/images/logo/all-heart-logo-rev.png" alt="All Heart Performance" class="footer-logo" width="160">
+          <p class="footer-tagline">Science Implemented With <em>heart</em></p>
+        </div>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <div class="footer-nav-group">
+            <h4>Pages</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="coaching.html">Coaching</a></li>
+              <li><a href="insights.html">Insights</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-nav-group">
+            <h4>Connect</h4>
+            <ul>
+              <li><a href="mailto:hello@allheartperformance.com.au">Email</a></li>
+              <li><a href="https://instagram.com/allheartperformance" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 All Heart Performance. All rights reserved.</p>
+        <p class="footer-copy"><a href="privacy.html">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="terms.html">Terms</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>

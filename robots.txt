@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /readiness.html
+Disallow: /thank-you.html
+
+Sitemap: https://allheartperformance.com.au/sitemap.xml

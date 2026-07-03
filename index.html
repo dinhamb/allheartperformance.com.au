@@ -4,29 +4,48 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>All Heart Performance — Science Implemented With Heart</title>
-  <meta name="description" content="Fitness coaching for athletes, everyday achievers and superhumans. Science implemented with heart.">
+  <meta name="description" content="Build the physical capacity to perform where it matters most — in sport, work and life. Coaching across cycling, running, triathlon, tennis and general fitness. Science implemented with heart.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <!-- Open Graph -->
   <meta property="og:title" content="All Heart Performance">
-  <meta property="og:description" content="Fitness coaching for athletes, everyday achievers and superhumans. Science implemented with heart.">
+  <meta property="og:description" content="Science implemented with heart.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://allheartperformance.com.au">
-  <meta property="og:image" content="https://allheartperformance.com.au/assets/images/logo/all-heart-logo.png">
+  <meta property="og:url" content="https://allheartperformance.com">
+  <meta property="og:image" content="https://allheartperformance.com/assets/images/logo/all-heart-logo.png">
   <meta property="og:site_name" content="All Heart Performance">
   <!-- Twitter/X card -->
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="All Heart Performance">
-  <meta name="twitter:description" content="Fitness coaching for athletes, everyday achievers and superhumans. Science implemented with heart.">
+  <meta name="twitter:description" content="Science implemented with heart.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="assets/css/styles.css?v=4">
+  <link rel="stylesheet" href="assets/css/styles.css?v=24">
+  <!-- Privacy-friendly analytics (cookieless). Activates once you create a free
+       Plausible account for this domain; until then it loads but records nothing. -->
+  <script defer data-domain="allheartperformance.com.au" src="https://plausible.io/js/script.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "All Heart Performance",
+    "description": "Coaching for endurance athletes, everyday achievers and the ambitious — cycling, running, triathlon, tennis and general fitness. Science implemented with heart.",
+    "url": "https://allheartperformance.com.au",
+    "logo": "https://allheartperformance.com.au/assets/images/logo/all-heart-logo.png",
+    "email": "hello@allheartperformance.com.au",
+    "areaServed": "AU",
+    "slogan": "Science Implemented With Heart",
+    "sameAs": ["https://instagram.com/allheartperformance"]
+  }
+  </script>
 </head>
 <body>
 
   <!-- Navigation -->
-  <header class="site-header transparent" id="site-header">
+  <header class="site-header page" id="site-header">
     <nav class="site-nav">
       <a href="index.html" class="nav-brand">
-        <img src="assets/images/logo/bannerlogo.png" alt="All Heart Performance" class="nav-logo-img">
+        <img src="assets/images/logo/bannerlogo.png" alt="All Heart Performance" class="nav-logo-img nav-logo-dark">
+        <img src="assets/images/logo/bannerlogo-rev.png" alt="All Heart Performance" class="nav-logo-img nav-logo-light">
       </a>
       <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -34,6 +53,8 @@
       <ul class="nav-menu" id="nav-menu">
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="about.html">About</a></li>
+        <li><a href="coaching.html">Coaching</a></li>
+        <li><a href="insights.html">Insights</a></li>
         <li><a href="contact.html" class="nav-cta">Get In Touch</a></li>
       </ul>
     </nav>
@@ -43,36 +64,41 @@
 
     <!-- ── Hero ─────────────────────────────────── -->
     <section class="hero" aria-label="Hero">
-      <div class="hero-bg" role="img" aria-label="Cyclist riding up a mountain climb at sunrise"></div>
+      <div class="hero-bg" role="img" aria-label="Cyclist riding at dawn"></div>
       <div class="hero-overlay" aria-hidden="true"></div>
-      <div class="hero-sunrise" aria-hidden="true"></div>
+      <h1 class="hero-tagline">
+        Science implemented<br>with <em>heart.</em>
+      </h1>
+    </section>
 
-      <div class="hero-content">
-        <h1 class="hero-tagline">
-          Science<br>implemented<br>with <em>heart.</em>
-        </h1>
-        <p class="hero-sub">
-          Training guided by physiology, experience, and wholehearted application of the principles that matter most.
-        </p>
-        <div class="hero-actions">
-          <a href="contact.html" class="btn btn-primary">Start the Conversation</a>
-          <a href="about.html" class="btn btn-ghost">Our Approach</a>
-        </div>
-      </div>
-
-      <div class="hero-scroll-hint" aria-hidden="true">
-        <div class="scroll-line"></div>
-        <span>Scroll</span>
+    <!-- ── Spread One ────────────────────────────── -->
+    <section class="spread reveal-on-scroll">
+      <p class="spread-quote">Elite performers don't all wear race numbers.</p>
+      <div class="spread-photo">
+        <img src="assets/images/editorial/quiet-preparation.jpg" alt="Hands tying the laces of a polished black shoe in warm morning light" loading="lazy" width="1536" height="1024">
       </div>
     </section>
 
-    <!-- ── CTA Strip ──────────────────────────────── -->
-    <section class="cta-strip reveal-on-scroll">
-      <div class="cta-strip-inner">
-        <h2>Ready to train with purpose?</h2>
-        <p>The first conversation is just that — a conversation. No obligation, no pitch. Let's explore whether working together makes sense for where you want to go.</p>
-        <a href="contact.html" class="btn btn-white">Get In Touch</a>
+    <!-- ── Spread Two ────────────────────────────── -->
+    <section class="spread reveal-on-scroll">
+      <p class="spread-quote">The moments that matter rarely have a finish line.</p>
+      <div class="spread-photo">
+        <img src="assets/images/editorial/presence.jpg" alt="A laptop left on the table as a parent walks away to join their child playing" loading="lazy" width="1536" height="1024">
       </div>
+    </section>
+
+    <!-- ── Spread Three ──────────────────────────── -->
+    <section class="spread reveal-on-scroll">
+      <p class="spread-quote">Performance is built long before it's required.</p>
+      <div class="spread-photo">
+        <img src="assets/images/editorial/earned-capability.jpg" alt="A cyclist riding clear off the front of the race, the field strung out on the hill behind" loading="lazy" width="1634" height="1089">
+      </div>
+    </section>
+
+    <!-- ── Close ─────────────────────────────────── -->
+    <section class="cta-minimal reveal-on-scroll">
+      <p>If this resonates, let's have a conversation.</p>
+      <a href="contact.html" class="btn btn-outline">Get In Touch</a>
     </section>
 
   </main>
@@ -82,8 +108,8 @@
     <div class="footer-inner">
       <div class="footer-top">
         <div>
-          <img src="assets/images/logo/all-heart-logo.png" alt="All Heart Performance" class="footer-logo" width="160">
-          <p class="footer-tagline">Science Implemented With Heart</p>
+          <img src="assets/images/logo/all-heart-logo-rev.png" alt="All Heart Performance" class="footer-logo" width="160">
+          <p class="footer-tagline">Science Implemented With <em>heart</em></p>
         </div>
         <nav class="footer-nav" aria-label="Footer navigation">
           <div class="footer-nav-group">
@@ -91,6 +117,8 @@
             <ul>
               <li><a href="index.html">Home</a></li>
               <li><a href="about.html">About</a></li>
+              <li><a href="coaching.html">Coaching</a></li>
+              <li><a href="insights.html">Insights</a></li>
               <li><a href="contact.html">Contact</a></li>
             </ul>
           </div>
@@ -104,7 +132,8 @@
         </nav>
       </div>
       <div class="footer-bottom">
-        <p class="footer-copy">&copy; 2024 All Heart Performance. All rights reserved.</p>
+        <p class="footer-copy">&copy; 2026 All Heart Performance. All rights reserved.</p>
+        <p class="footer-copy"><a href="privacy.html">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="terms.html">Terms</a></p>
       </div>
     </div>
   </footer>

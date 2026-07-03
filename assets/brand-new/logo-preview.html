@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>All Heart Performance Logo Preview</title>
+    <style>
+      :root { color: #191919; background: #f4f4f1; font-family: Inter, Arial, sans-serif; }
+      * { box-sizing: border-box; }
+      body { margin: 0; padding: 28px; }
+      main { max-width: 1440px; margin: 0 auto; }
+      h1 { margin: 0 0 8px; font-size: 24px; font-weight: 650; letter-spacing: 0; }
+      p { margin: 0 0 24px; color: #555; font-size: 15px; }
+      .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; align-items: start; }
+      .variants { margin-top: 18px; }
+      figure { margin: 0; background: #fff; border: 1px solid #d9d9d4; border-radius: 8px; overflow: hidden; }
+      figcaption { display: flex; justify-content: space-between; gap: 12px; padding: 11px 13px; border-bottom: 1px solid #e5e5e0; font-size: 13px; font-weight: 650; }
+      .note { color: #777; font-weight: 500; }
+      .frame { min-height: 500px; display: grid; place-items: center; padding: 18px; }
+      .short { min-height: 310px; }
+      .dark { background: #151515; }
+      img { display: block; width: 100%; height: auto; max-height: 100%; object-fit: contain; }
+      @media (max-width: 980px) { body { padding: 16px; } .grid { grid-template-columns: 1fr; } }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>All Heart Performance Logo Preview</h1>
+      <p>Vector recreation compared against the supplied PNG references for line shape fidelity, tagline styling fidelity, and overall balance.</p>
+
+      <section class="grid" aria-label="Master logo compared with references">
+        <figure>
+          <figcaption>New master SVG <span class="note">vector recreation</span></figcaption>
+          <div class="frame"><img src="logo-master.svg" alt="New All Heart Performance master SVG"></div>
+        </figure>
+        <figure>
+          <figcaption>Line reference <span class="note">icon authority</span></figcaption>
+          <div class="frame"><img src="reference-original-line.png" alt="Original All Heart Performance line reference"></div>
+        </figure>
+        <figure>
+          <figcaption>Tagline reference <span class="note">tagline authority</span></figcaption>
+          <div class="frame"><img src="reference-heart-tagline.png" alt="All Heart Performance tagline reference"></div>
+        </figure>
+      </section>
+
+      <section class="grid variants" aria-label="Logo variants">
+        <figure>
+          <figcaption>Horizontal SVG <span class="note">wide use</span></figcaption>
+          <div class="frame short"><img src="logo-horizontal.svg" alt="Horizontal All Heart Performance SVG"></div>
+        </figure>
+        <figure>
+          <figcaption>Icon SVG <span class="note">mark only</span></figcaption>
+          <div class="frame short"><img src="logo-icon.svg" alt="All Heart Performance icon SVG"></div>
+        </figure>
+        <figure>
+          <figcaption>White SVG <span class="note">dark background</span></figcaption>
+          <div class="frame short dark"><img src="logo-white.svg" alt="White All Heart Performance SVG"></div>
+        </figure>
+      </section>
+    </main>
+  </body>
+</html>

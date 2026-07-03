@@ -4,29 +4,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact — All Heart Performance</title>
-  <meta name="description" content="Get in touch with All Heart Performance. Fitness coaching for athletes, everyday achievers and superhumans.">
+  <meta name="description" content="Get in touch with All Heart Performance. Coaching for endurance athletes, everyday achievers and the ambitious.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <!-- Open Graph -->
   <meta property="og:title" content="Contact — All Heart Performance">
-  <meta property="og:description" content="Fitness coaching for athletes, everyday achievers and superhumans. Science implemented with heart.">
+  <meta property="og:description" content="Coaching for endurance athletes, everyday achievers and the ambitious. Science implemented with heart.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://allheartperformance.com.au/contact.html">
-  <meta property="og:image" content="https://allheartperformance.com.au/assets/images/logo/all-heart-logo.png">
+  <meta property="og:url" content="https://allheartperformance.com/contact.html">
+  <meta property="og:image" content="https://allheartperformance.com/assets/images/logo/all-heart-logo.png">
   <meta property="og:site_name" content="All Heart Performance">
   <!-- Twitter/X card -->
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Contact — All Heart Performance">
-  <meta name="twitter:description" content="Fitness coaching for athletes, everyday achievers and superhumans. Science implemented with heart.">
+  <meta name="twitter:description" content="Coaching for endurance athletes, everyday achievers and the ambitious. Science implemented with heart.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="assets/css/styles.css?v=4">
+  <link rel="stylesheet" href="assets/css/styles.css?v=23">
+  <!-- Privacy-friendly analytics (cookieless). Activates once you create a free
+       Plausible account for this domain; until then it loads but records nothing. -->
+  <script defer data-domain="allheartperformance.com.au" src="https://plausible.io/js/script.js"></script>
 </head>
-<body>
+<body class="inner-page">
 
   <!-- Navigation -->
   <header class="site-header page" id="site-header">
     <nav class="site-nav">
       <a href="index.html" class="nav-brand">
-        <img src="assets/images/logo/bannerlogo.png" alt="All Heart Performance" class="nav-logo-img">
+        <img src="assets/images/logo/bannerlogo.png" alt="All Heart Performance" class="nav-logo-img nav-logo-dark">
+        <img src="assets/images/logo/bannerlogo-rev.png" alt="All Heart Performance" class="nav-logo-img nav-logo-light">
       </a>
       <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -34,6 +39,8 @@
       <ul class="nav-menu" id="nav-menu">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
+        <li><a href="coaching.html">Coaching</a></li>
+        <li><a href="insights.html">Insights</a></li>
         <li><a href="contact.html" class="nav-cta">Get In Touch</a></li>
       </ul>
     </nav>
@@ -61,10 +68,13 @@
             <p class="overline">Get In Touch</p>
             <h3>Start the Conversation</h3>
             <p>
-              Whether you're exploring structured training for the first time or looking for a fresh perspective on your current approach — the first step is simply reaching out.
+              Whether you're chasing a podium finish, training for your first event, or simply working to feel stronger and fitter — the first step is the same: reach out, and let's talk.
             </p>
             <p>
               No obligation, no pressure. Just an honest conversation about where you are and where you'd like to be.
+            </p>
+            <p>
+              Curious about cost first? Take a look at our <a href="coaching.html" style="color: var(--crimson);">coaching &amp; pricing</a> before you reach out.
             </p>
 
             <ul class="contact-methods">
@@ -107,13 +117,48 @@
           <div class="contact-panel">
             <h3>Send a Message</h3>
             <p>
-              Email is the best way to reach me. I aim to respond to all enquiries within 48 hours.
+              Tell us a little about your goals and we'll be in touch within 48 hours.
             </p>
-            <a href="mailto:hello@allheartperformance.com.au" class="btn btn-primary">
-              Open Email Client
-            </a>
+
+            <!-- Web3Forms: replace the access_key value with your own free key from https://web3forms.com -->
+            <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+              <input type="hidden" name="access_key" value="89f13a26-e39d-42b8-81c3-f4a06671ce69">
+              <input type="hidden" name="subject" value="New enquiry from All Heart Performance">
+              <input type="hidden" name="from_name" value="All Heart Performance Website">
+              <input type="hidden" name="redirect" value="https://allheartperformance.com.au/thank-you.html">
+              <!-- Honeypot spam trap -->
+              <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+
+              <div class="form-field">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required autocomplete="name">
+              </div>
+              <div class="form-field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required autocomplete="email">
+              </div>
+              <div class="form-field">
+                <label for="sport">Main focus</label>
+                <select id="sport" name="sport">
+                  <option value="">Select one…</option>
+                  <option>Cycling</option>
+                  <option>Running</option>
+                  <option>Triathlon</option>
+                  <option>General fitness</option>
+                  <option>Not sure yet</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="message">Your goals</label>
+                <textarea id="message" name="message" placeholder="Where are you now, and where would you like to be?" required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary">Send Message</button>
+              <p class="form-note">We aim to respond to all enquiries within 48 hours. Prefer email? Reach us any time at hello@allheartperformance.com.au.</p>
+            </form>
+
             <p class="contact-panel-note">
-              Prefer to connect on social? Find me on Instagram at
+              Prefer to connect on social? Find us on Instagram at
               <a href="https://instagram.com/allheartperformance" target="_blank" rel="noopener noreferrer" style="color: var(--crimson);">@allheartperformance</a>
               for training insights and updates.
             </p>
@@ -130,8 +175,8 @@
     <div class="footer-inner">
       <div class="footer-top">
         <div>
-          <img src="assets/images/logo/all-heart-logo.png" alt="All Heart Performance" class="footer-logo" width="160">
-          <p class="footer-tagline">Science Implemented With Heart</p>
+          <img src="assets/images/logo/all-heart-logo-rev.png" alt="All Heart Performance" class="footer-logo" width="160">
+          <p class="footer-tagline">Science Implemented With <em>heart</em></p>
         </div>
         <nav class="footer-nav" aria-label="Footer navigation">
           <div class="footer-nav-group">
@@ -139,6 +184,8 @@
             <ul>
               <li><a href="index.html">Home</a></li>
               <li><a href="about.html">About</a></li>
+              <li><a href="coaching.html">Coaching</a></li>
+              <li><a href="insights.html">Insights</a></li>
               <li><a href="contact.html">Contact</a></li>
             </ul>
           </div>
@@ -152,7 +199,8 @@
         </nav>
       </div>
       <div class="footer-bottom">
-        <p class="footer-copy">&copy; 2024 All Heart Performance. All rights reserved.</p>
+        <p class="footer-copy">&copy; 2026 All Heart Performance. All rights reserved.</p>
+        <p class="footer-copy"><a href="privacy.html">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="terms.html">Terms</a></p>
       </div>
     </div>
   </footer>
