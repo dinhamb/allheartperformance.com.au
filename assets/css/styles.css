@@ -712,10 +712,11 @@ img { display: block; max-width: 100%; }
 .about-body--full p { text-align: left; }
 
 /* ── Founder portrait, standalone at the bottom of the page ───────── */
+/* Kept small and modest — passport-photo scale, not a feature image */
 .about-portrait-section { display: flex; justify-content: center; }
 .about-portrait-img {
   width: 100%;
-  max-width: 420px;
+  max-width: 140px;
   height: auto;
   display: block;
   margin: 0 auto;
