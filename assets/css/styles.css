@@ -328,6 +328,8 @@ img { display: block; max-width: 100%; }
   padding: 150px var(--pad-x) 0;
 }
 .spread:last-of-type { padding-bottom: 0; }
+/* Text-only observation (photo temporarily removed) — no trailing gap under the quote */
+.spread--text .spread-quote { margin-bottom: 0; }
 .spread-quote {
   font-family: var(--font-display);
   font-weight: 400;
@@ -820,7 +822,8 @@ img { display: block; max-width: 100%; }
 
 /* ─── Footer ─────────────────────────────────────── */
 .site-footer {
-  background: var(--navy-black);
+  background: var(--cream);
+  border-top: 1px solid rgba(22, 19, 24, 0.08);
   padding: 64px var(--pad-x) 40px;
 }
 .footer-inner {
@@ -833,28 +836,13 @@ img { display: block; max-width: 100%; }
   justify-content: space-between;
   gap: 48px;
   padding-bottom: 52px;
-  border-bottom: 1px solid rgba(245, 242, 236, 0.08);
+  border-bottom: 1px solid rgba(22, 19, 24, 0.10);
   flex-wrap: wrap;
 }
 .footer-logo {
-  width: 160px;
-  opacity: 0.90;
-  margin-bottom: 16px;
-}
-.footer-tagline {
-  font-size: 0.72rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: rgba(245, 242, 236, 0.32);
-}
-.footer-tagline em {
-  font-family: var(--font-display);
-  font-style: italic;
-  font-weight: 400;
-  text-transform: none;
-  letter-spacing: 0;
-  font-size: 1.15em;
-  color: var(--gold);
+  width: 240px;
+  max-width: 68vw;
+  height: auto;
 }
 .footer-nav {
   display: flex;
@@ -865,7 +853,7 @@ img { display: block; max-width: 100%; }
   font-size: 0.68rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: rgba(245, 242, 236, 0.35);
+  color: var(--warm-gray-dk);
   margin-bottom: 16px;
 }
 .footer-nav-group ul {
@@ -876,10 +864,10 @@ img { display: block; max-width: 100%; }
 }
 .footer-nav-group a {
   font-size: 0.88rem;
-  color: rgba(245, 242, 236, 0.62);
+  color: var(--warm-gray-dk);
   transition: color 0.3s;
 }
-.footer-nav-group a:hover { color: var(--off-white); }
+.footer-nav-group a:hover { color: var(--crimson); }
 
 .footer-bottom {
   display: flex;
@@ -891,13 +879,13 @@ img { display: block; max-width: 100%; }
 }
 .footer-copy {
   font-size: 0.78rem;
-  color: rgba(245, 242, 236, 0.28);
+  color: var(--warm-gray);
 }
 .footer-bottom a {
-  color: rgba(245, 242, 236, 0.58);
+  color: var(--warm-gray-dk);
   transition: color 0.3s var(--ease);
 }
-.footer-bottom a:hover { color: var(--off-white); }
+.footer-bottom a:hover { color: var(--crimson); }
 
 /* ── Hamburger button ───────────────────────────────────────────────────── */
 .nav-hamburger {
