@@ -701,6 +701,26 @@ img { display: block; max-width: 100%; }
 }
 .about-body p:last-of-type { margin-bottom: 36px; }
 
+/* Bio without the sidebar portrait — centred measure for readability */
+.about-body--full {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+.about-body--full .overline { justify-content: center; }
+.about-body--full .overline::before { display: none; }
+.about-body--full p { text-align: left; }
+
+/* ── Founder portrait, standalone at the bottom of the page ───────── */
+.about-portrait-section { display: flex; justify-content: center; }
+.about-portrait-img {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
 .about-quote-strip {
   background: var(--cream);
   padding: 96px var(--pad-x);
