@@ -46,6 +46,10 @@ if (header && !header.classList.contains('page')) {
 }
 
 // ── Scroll-reveal ──
+// threshold: 0 fires as soon as any part of the element enters the viewport.
+// A higher threshold (e.g. 0.08) requires that fraction of the element's OWN
+// height to be visible — which a long article body (thousands of px tall) can
+// never reach on a phone screen, leaving it stuck at opacity:0 forever.
 const revealEls = document.querySelectorAll('.reveal-on-scroll');
 const revealObserver = new IntersectionObserver(
   (entries) => {
@@ -56,6 +60,17 @@ const revealObserver = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.08, rootMargin: '0px 0px -48px 0px' }
+  { threshold: 0, rootMargin: '0px 0px -48px 0px' }
 );
 revealEls.forEach(el => revealObserver.observe(el));
+
+// Safety net: if for any reason an element never gets marked visible
+// (JS error elsewhere, unusual layout, very tall element edge case),
+// don't let content stay permanently invisible.
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    document.querySelectorAll('.reveal-on-scroll:not(.visible)').forEach(el => {
+      el.classList.add('visible');
+    });
+  }, 2500);
+});
